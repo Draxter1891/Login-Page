@@ -1,0 +1,148 @@
+/* Ubuntu font import */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    max-height: 100vh;
+    align-items: center;
+    background: #F7EFE5;
+}
+.container{
+    position: relative;
+    height: 500px;
+    width: 450px;
+    transform: scale(1.2);
+}
+
+.container::before{
+    content: '';
+    position:absolute;
+    height: 300px;
+    width: 300px;
+    background: linear-gradient(#C3ACD0,#674188);
+    border-radius: 50%;
+    transform: translate(-150px);
+    z-index: -1;
+}
+.container::after{
+    content: '';
+    position:absolute;
+    height: 300px;
+    width: 300px;
+    background: linear-gradient(#C88EA7,#99627A);
+    border-radius: 50%;
+    transform: translate(500px,300px);
+    z-index: -1;
+}
+.login{
+    position:absolute;
+    border-top: 2px solid rgb(255, 255, 255);
+    border-left: 2px solid rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.451);
+    box-shadow:1px 1px 10px 1px rgb(162, 160, 160) ;
+    overflow: hidden;
+    padding: 50px 40px;
+    flex-direction: column;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    
+}
+.login::before{
+    content: '';
+    position: absolute;
+    height: 600px;
+    width: 600px;
+    background:rgba(107, 106, 106,0.2) ;
+    border-radius: 50%;
+    box-shadow: 10px 0 0 white,inset 0 0 20px rgb(82, 81, 81);
+    transform: translate(-130px,-218px);
+
+}
+.login h2{
+    text-align: center;
+    color: white;
+    letter-spacing: 8px;
+    transform: scale(1.2);
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.input-box{
+    position: relative;
+    width: 410px;
+    margin-top: 35px;
+}
+
+.input-box input{
+    position: relative;
+    padding: 20px 10px 10px;
+    width: 80%;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 2px;
+    border-bottom: 1px solid white;
+}
+.input-box span{
+    position: absolute;
+    left:0;
+    padding: 20px 10x 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    pointer-events: none;
+    transition: 0.5s;
+    letter-spacing: 2px;
+}
+.input-box input:valid~span,
+.input-box input:focus~span{
+    color: rgb(255, 255, 255);
+    transform: translateY(-25px) translateX(-5px);
+    font-size: 12px;
+}
+
+.links{
+    margin-top: 20px;
+    margin-left: -60px;
+    z-index: 1;
+}
+.links a{
+    margin: 10px 20px;
+    color: #99627A;
+    font-size: 15px;
+}
+.links a:hover{
+    color: #C88EA7;
+}
+button{
+    border: none;
+    outline: none;
+    cursor:pointer;
+    background: #7286D3;
+    color: white;
+    padding: 11px 25px;
+    width: 100px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-left: -5%;
+    z-index: 1;
+}
+button:active{
+    background:#fffefe ;
+    color: #8EA7E9;
+}
